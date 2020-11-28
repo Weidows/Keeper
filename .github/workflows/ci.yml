@@ -16,12 +16,10 @@ jobs:
 
       - name: Auto green
         run: |
-          git config --local user.email "utsuko27@qq.com"
           git config --local user.name "Weidows"
-          git remote add github git@github.com:${{ github.repository }}.git
-          git remote add gitee git@gitee.com:${{ github.repository }}.git
+          git config --local user.email "utsuko27@qq.com"
+          git remote set-url origin https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
           git pull --rebase
           date +"%Y-%m-%d %H:%M:%S.%N" >> keepchange.txt
-          git commit -am "a commit a day keeps your girlfriend away"
-          git push github main
-          git push gitee main
+          git commit -am "a commit a day keeps girlfriend away"
+          git push
