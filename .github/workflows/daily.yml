@@ -22,12 +22,11 @@ jobs:
           git remote set-url origin https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
           git pull --rebase
           # 变更文件
-          date +"%Y-%m-%d %H:%M:%S.%N" >> Autogreen.log # Autogreen.记录
-          curl https://weidows.avosapps.us/comments #唤醒LeanCloud评论管理系统
-          date +"%Y-%m-%d %H:%M:%S.%N" 唤醒LeanCloud评论管理系统. >> time.log
+          curl https://weidows.avosapps.us/comments # 唤醒LeanCloud评论管理系统
           cd
           cd ./Bing
           curl -o %Y-%m-%d.jpg https://www.bing.com/th?id=OHR.MountTaranaki_EN-CN5963817857_1920x1080.jpg
           cd..
+          date +"%Y-%m-%d %H:%M:%S.%N" >> Tasks.log # 记录
           git commit -am "A commit a day keeps girlfriend away."
           git push
