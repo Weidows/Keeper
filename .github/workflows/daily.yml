@@ -25,7 +25,7 @@ jobs:
           curl https://weidows.avosapps.us/comments # 唤醒LeanCloud评论管理系统
           cd ./Bing/
           DATE=`date +"%Y-%m-%d"`
-          curl -o $DATE.jpg "https://www.bing.com/th?id=OHR.HocesDuraton_ZH-CN2152159552_1920x1080.jpg&rf=LaDigue_1920x1080.jpg&pid=hp"
+          curl -o $DATE.jpg "http://fly.atlinker.cn/api/bing/1920.php"
           git add .
           cd ../
           date +"%Y-%m-%d %H:%M:%S.%N" >> Tasks.log # 记录
