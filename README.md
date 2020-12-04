@@ -2,8 +2,8 @@
  * @Author: Weidows
  * @Date: 2020-11-28 17:36:36
  * @LastEditors: Weidows
- * @LastEditTime: 2020-11-30 00:47:35
- * @FilePath: \undefinedg:\Repo\Keeper\README.md
+ * @LastEditTime: 2020-12-04 17:51:28
+ * @FilePath: \Keeper\README.md
  * @Description:
 -->
 
@@ -18,7 +18,7 @@
 - ## 一个基于 `GitHub-Action` 的定时任务.
 - ## 一个每日溜圈的`爬虫`.
   - ### 每日访问唤醒 `LeanCloud` 评论后台.
-  - ### 每日获取`必应壁纸`.
+  - ### 每日获取`必应壁纸(Bug中)`.
 
 ---
 
