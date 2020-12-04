@@ -1,5 +1,5 @@
 <?php
-$path = date("Bing/Ym"); //设置图片缓存文件夹
+$path = date("Ym"); //设置图片缓存文件夹
 $filename = date("Ymd") . '.jpg';  //用年月日来命名新的文件名
 if (!file_exists($path.'/'. $filename))    //如果文件不存在，则说明今天还没有进行缓存
 {
