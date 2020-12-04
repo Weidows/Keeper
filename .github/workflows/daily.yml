@@ -14,6 +14,11 @@ jobs:
       - name: Clone repository
         uses: actions/checkout@v2
 
+      - name: Setup PHP Action
+        uses: shivammathur/setup-php@2.9.0
+        run: |
+          php index.php
+
       - name: My Tasks
         run: |
           # 设置Git
@@ -21,13 +26,10 @@ jobs:
           git config --local user.email "utsuko27@qq.com"
           git remote set-url origin https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
           git pull --rebase
-          # 变更文件
+
           curl https://weidows.avosapps.us/comments # 唤醒LeanCloud评论管理系统
-          cd ./Bing/
-          DATE=`date +"%Y-%m-%d"`
-          # curl -o $DATE.jpg "http://fly.atlinker.cn/api/bing/1920.php"
-          git add .
-          cd ../
+
           date +"%Y-%m-%d %H:%M:%S.%N" >> Tasks.log # 记录
+          git add .
           git commit -am "A commit a day keeps girlfriend away."
           git push
