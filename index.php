@@ -1,12 +1,3 @@
-/*
- * @Author: Weidows
- * @Date: 2020-12-04 23:10:15
- * @LastEditors: Weidows
- * @LastEditTime: 2020-12-04 23:29:01
- * @FilePath: \Keeper\index.php
- * @Description:
- */
-
 <?php
 $path = date("Bing/Ym"); //设置图片缓存文件夹
 $filename = date("Ymd") . '.jpg';  //用年月日来命名新的文件名
@@ -20,32 +11,6 @@ if (!file_exists($path.'/'. $filename))    //如果文件不存在，则说明�
     $str = json_decode($str,true);
     $imgurl = 'http://cn.bing.com'.$str['images'][0]['url'];    //获取图片url
     $img = grabImage($imgurl, $path.'/'.$filename); //读取并保存图片
-/*
-
-   $handle = fopen("dat.txt", "a");    //用于存放图片信息，如果不需要保存图片的相关信息，可以把下面这些去掉。
-    if ($handle)
-    {
-        $copyright = $str['images'][0]['copyright'];    //说明
-        $startdate = $str['images'][0]['startdate'];
-        $fullstartdate = $str['images'][0]['fullstartdate'];
-        $enddate = $str['images'][0]['enddate'];
-        $urlbase = $str['images'][0]['urlbase'];
-        $copyrightlink = $str['images'][0]['copyrightlink'];
-        $quiz = $str['images'][0]['quiz'];
-        $wp = $str['images'][0]['wp'];
-        $hsh = $str['images'][0]['hsh'];
-        $drk = $str['images'][0]['drk'];
-        $top = $str['images'][0]['top'];
-        $bot = $str['images'][0]['bot'];
-        $tempArr = array("imgurl"=>$imgurl,"copyright"=>$copyright, "startdate"=>$startdate,
-        "fullstartdate"=>$fullstartdate, "enddate"=> $enddate, "urlbase"=>$urlbase,
-        "copyrightlink"=> $copyrightlink, "quiz"=>$quiz, "wp"=> $wp,
-        "hsh"=>$hsh,"drk"=>$drk, "top"=> $top, "bot"=> $bot);   //将相关信息放进数组中
-        fwrite($handle, json_encode($tempArr) ."\r\n"); //最终以json格式保存在文本文档中
-        fclose($handle);
-    }
-
- */
 }
 function grabImage($url, $filename = "")
 {
