@@ -23,7 +23,7 @@ jobs:
         run: |
           # 连通ssh
           mkdir ~/.ssh
-          echo "${{ secrets.CONFIG }}" >> ~/.ssh/config
+          copy ./config ~/.ssh/config
           echo "${{ secrets.RSA }}" > ~/.ssh/Gitee_rsa
           chmod 600 ~/.ssh/*
           ssh -T git@gitee.com
@@ -32,10 +32,10 @@ jobs:
           git config --local user.name "Weidows"
           git config --local user.email "utsuko27@qq.com"
           git remote set-url origin https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
-          git remote add Gitee git@gitee.com:Weidows/Keeper.git
+          git remote add Gitee git@gitee.com:${{ github.repository }}.git
 
           # 唤醒LeanCloud评论管理系统
-          curl https://weidows.avosapps.us/comments
+          curl ${{ secrets.URL }}
 
           # 获取必应壁纸
           cd ./Bing/ && php index.php && cd ../
@@ -46,5 +46,5 @@ jobs:
           # 推送
           git add .
           git commit -am "A commit a day keeps girlfriend away."
-          # git push origin main
+          git push origin main
           git push Gitee main -f

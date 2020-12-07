@@ -1,0 +1,6 @@
+StrictHostKeyChecking no
+# gitee
+Host gitee.com
+HostName gitee.com
+PreferredAuthentications publickey
+IdentityFile ~/.ssh/Gitee_rsa
