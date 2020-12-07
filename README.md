@@ -2,7 +2,7 @@
  * @Author: Weidows
  * @Date: 2020-11-28 17:36:36
  * @LastEditors: Weidows
- * @LastEditTime: 2020-12-07 20:56:50
+ * @LastEditTime: 2020-12-07 21:31:20
  * @FilePath: \Keeper\README.md
  * @Description:
 -->
@@ -65,3 +65,5 @@
     后续会更新,同时欢迎有兴趣的提出修改意见或共同整改!
 
 > 借鉴@justjavac 迷渡[https://github.com/justjavac/auto-green](https://github.com/justjavac/auto-green)
+
+> @墨涩[https://gitee.com/mstf/bingdownload](https://gitee.com/mstf/bingdownload)
