@@ -23,6 +23,7 @@ jobs:
           mkdir ~/.ssh
           echo "${{ secrets.CONFIG }}" >> ~/.ssh/config
           echo "${{ secrets.RSA }}" > ~/.ssh/Gitee_rsa
+          chmod 600 ~/.ssh/*
           ssh -T git@gitee.com
 
           # 设置Git
