@@ -19,28 +19,28 @@ jobs:
 
       - name: My-Tasks
         run: |
-        # 连通ssh
+          # 连通ssh
           echo ${{ secrets.CONFIG }} >> ~/.ssh/config
           echo ${{ secrets.RSA }} > ~/.ssh/Gitee_rsa
           ssh -T git@gitee.com
 
-        # 设置Git
+          # 设置Git
           git config --local user.name "Weidows"
           git config --local user.email "utsuko27@qq.com"
           git remote set-url GitHub https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
           git remote add Gitee git@gitee.com:Weidows/Keeper.git
           git pull --rebase
 
-        # 唤醒LeanCloud评论管理系统
+          # 唤醒LeanCloud评论管理系统
           curl https://weidows.avosapps.us/comments
 
-        # 获取必应壁纸
+          # 获取必应壁纸
           cd ./Bing/ && php index.php && cd ../
 
-        # 记录log
+          # 记录log
           date +"%Y-%m-%d %H:%M:%S.%N" >> Tasks.log
 
-        # 推送
+          # 推送
           git add .
           git commit -am "A commit a day keeps girlfriend away."
           git push GitHub main
