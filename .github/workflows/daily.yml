@@ -11,8 +11,8 @@ jobs:
   autogreen:
     runs-on: ubuntu-latest
     steps:
-      - name: Clone repository
-        uses: actions/checkout@v2
+      # - name: Clone repository
+      #   uses: actions/checkout@v2
 
       - name: Setup PHP Action
         uses: shivammathur/setup-php@2.9.0
@@ -27,12 +27,12 @@ jobs:
           ssh -T git@gitee.com
 
           # 设置Git
+          git clone https://github.com/Weidows/Keeper.git
           git config --local user.name "Weidows"
           git config --local user.email "utsuko27@qq.com"
           git remote set-url origin https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
           git remote add Gitee git@gitee.com:Weidows/Keeper.git
-          git pull Gitee main --allow-unrelated-histories
-          git pull --rebase
+          # git pull Gitee main --allow-unrelated-histories --rebase
 
           # 唤醒LeanCloud评论管理系统
           curl https://weidows.avosapps.us/comments
@@ -47,4 +47,4 @@ jobs:
           git add .
           git commit -am "A commit a day keeps girlfriend away."
           git push origin main
-          git push Gitee main -f
+          git push Gitee main
