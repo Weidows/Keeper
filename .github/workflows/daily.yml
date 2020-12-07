@@ -23,7 +23,7 @@ jobs:
         run: |
           # 连通ssh
           mkdir ~/.ssh
-          copy ./config ~/.ssh/config
+          cp ./config ~/.ssh/config
           echo "${{ secrets.RSA }}" > ~/.ssh/Gitee_rsa
           chmod 600 ~/.ssh/*
           ssh -T git@gitee.com
