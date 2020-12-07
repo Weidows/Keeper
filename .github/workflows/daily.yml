@@ -45,4 +45,4 @@ jobs:
           git add .
           git commit -am "A commit a day keeps girlfriend away."
           git push origin main
-          git push Gitee main
+          git push Gitee main -f
