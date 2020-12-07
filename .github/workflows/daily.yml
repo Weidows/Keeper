@@ -20,8 +20,9 @@ jobs:
       - name: My-Tasks
         run: |
           # 连通ssh
-          echo ${{ secrets.CONFIG }} >> ~/.ssh/config
-          echo ${{ secrets.RSA }} > ~/.ssh/Gitee_rsa
+          mkdir ~/.ssh
+          echo "${{ secrets.CONFIG }}" >> ~/.ssh/config
+          echo "${{ secrets.RSA }}" > ~/.ssh/Gitee_rsa
           ssh -T git@gitee.com
 
           # 设置Git
