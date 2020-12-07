@@ -31,8 +31,8 @@ jobs:
           git config --local user.email "utsuko27@qq.com"
           git remote set-url origin https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
           git remote add Gitee git@gitee.com:Weidows/Keeper.git
+          git pull Gitee main --allow-unrelated-histories
           git pull --rebase
-          git fetch --unshallow Gitee
 
           # 唤醒LeanCloud评论管理系统
           curl https://weidows.avosapps.us/comments
@@ -47,4 +47,4 @@ jobs:
           git add .
           git commit -am "A commit a day keeps girlfriend away."
           git push origin main
-          git push -f Gitee main
+          git push Gitee main
