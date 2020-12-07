@@ -47,6 +47,6 @@ jobs:
           git pull --rebase
           git push
 
-          git remote add gitee gitee git@gitee.com:Weidows/Keeper.git
+          git remote add gitee git@gitee.com:Weidows/Keeper.git
           git pull --rebase
           git push gitee main
