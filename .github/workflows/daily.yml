@@ -32,6 +32,7 @@ jobs:
           git remote set-url origin https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
           git remote add Gitee git@gitee.com:Weidows/Keeper.git
           git pull --rebase
+          git fetch --unshallow Gitee
 
           # 唤醒LeanCloud评论管理系统
           curl https://weidows.avosapps.us/comments
