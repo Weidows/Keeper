@@ -29,9 +29,9 @@ jobs:
           # 设置Git
           git config --local user.name "Weidows"
           git config --local user.email "utsuko27@qq.com"
-          git remote set-url github https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
+          git remote add github https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
           git remote add gitee git@gitee.com:Weidows/Keeper.git
-          git pull --rebase
+          # git pull --rebase
 
           # 唤醒LeanCloud评论管理系统
           curl https://weidows.avosapps.us/comments
