@@ -29,7 +29,7 @@ jobs:
           # 设置Git
           git config --local user.name "Weidows"
           git config --local user.email "utsuko27@qq.com"
-          git remote add Github https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
+          git remote set-url Github https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
           git remote add Gitee git@gitee.com:Weidows/Keeper.git
           git pull --rebase
 
