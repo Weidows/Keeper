@@ -26,6 +26,8 @@
 # Feature
 
 - 在指定时间对 `GitHub + Gitee` 进行 `push` 以保持 Profile 格子绿油油(但是操作原理不同).
+  - [GitHub profile预览](https://github.com/Weidows)
+  - [Gitee profile预览](https://gitee.com/Weidows)
 - 每次执行任务会把 Log 记录在 `Tasks.log` 中.
 - 必应壁纸存储在[Bing](./Bing/)里面.
 - 任务都在`daily.yml`里面,可自定义修改.
