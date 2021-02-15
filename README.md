@@ -2,7 +2,7 @@
  * @Author: Weidows
  * @Date: 2020-11-28 17:36:36
  * @LastEditors: Weidows
- * @LastEditTime: 2021-02-14 20:15:41
+ * @LastEditTime: 2021-02-15 19:07:06
  * @FilePath: \Keeper\README.md
  * @Description:
 -->
@@ -69,5 +69,3 @@
 > 借鉴@justjavac 迷渡[https://github.com/justjavac/auto-green](https://github.com/justjavac/auto-green)
 
 > @墨涩[https://gitee.com/mstf/bingdownload](https://gitee.com/mstf/bingdownload)
-
-> @AimTao[https://github.com/AimTao/leancloud-self-wake](https://github.com/AimTao/leancloud-self-wake)

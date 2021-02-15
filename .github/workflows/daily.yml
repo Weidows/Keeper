@@ -34,6 +34,9 @@ jobs:
           git remote set-url origin https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
           git remote add Gitee git@gitee.com:${{ github.repository }}.git
 
+          # 唤醒LeanCloud评论管理系统
+          curl ${{ secrets.URL }}
+
           # 获取必应壁纸
           cd ./Bing/ && php index.php && cd ../
 
